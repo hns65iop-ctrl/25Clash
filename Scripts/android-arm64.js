@@ -1,4 +1,4 @@
-const Host = '127.0.0.1'; // CoC 18.0.5 doesn't like Local IPS, so use Public IP
+const Host = '13.223.95.66'; // CoC 18.0.5 doesn't like Local IPS, so use Public IP
 const Port = '9339';
 
 var base = Process.getModuleByName("libg.so").base;
@@ -64,4 +64,5 @@ Interceptor.attach(getaddrinfo, {
             addr.add(3).writeU8(0x52);
         }, 1000);
     }
+
 });
